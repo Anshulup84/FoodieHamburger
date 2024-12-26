@@ -107,6 +107,40 @@ html {
    margin-top: 64px;
  }
 
+ .close-icon {
+   position: absolute;
+   top: 8px;
+   right: 12px;
+   cursor: pointer;
+   display: none;
+ }
+
+ .hamburger-menu-container {
+   overflow: hidden;
+   position: relative;
+   width: 100px;
+   height: 100px;
+   display: none;
+ }
+
+ .hamburger-menu {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   position: absolute;
+   top: -100px;
+   right: -100px;
+   background-color: white;
+   cursor: pointer;
+ }
+
+ .hamburger-icon {
+   font-size: 32px;
+   position: absolute;
+   bottom: 32px;
+   left: 40px;
+ }
+
  @media(max-width: 1200px) {
    nav a {
       font-size: 16px;
@@ -129,22 +163,60 @@ html {
    nav a + a {
       margin-left: 32px;
    }
+
+   .hero-section {
+      margin-top: 32px;
+   }
+
+   .section {
+      margin-top: 42px;
+   }
+
+   .hero-section p {
+      font-size: 10px;
+   }
+
+   .section h2 {
+      font-size: 14px;
+   }
+
  }
 
  @media(max-width: 768px) {
    header {
-      background-color: transparent;
+      background-color: #f6f0ebb7;
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
    }
 
    nav {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(255, 255, 255, 0.9);
       flex-direction: column;
-      right: 0;
+      padding: 24px;
+      right: 24px;
+      top: 24px;
+      display: none;
    }
 
    nav a + a {
       margin: 0;
+      margin-top: 16px;
    }
+
+   .close-icon, .hamburger-menu-container {
+      display: block;
+   }
+
+   .menu-open nav {
+      display: flex;
+   }
+
+   .menu-open .hamburger-menu-container {
+      display: none;
+   }
+
+   
  }
 
